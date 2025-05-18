@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fabric.js Test</title>
+  <style>
+    canvas { border: 1px solid #ccc; background: white; margin: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>🖌️ Fabric.js Drawing Test</h2>
+<canvas id="testCanvas" width="400" height="400"></canvas>
+
+<!-- Load Fabric.js -->
+<script src="fabric.min.js"></script>
+<script>
+  // Initialize drawing canvas
+  let canvas = new fabric.Canvas("testCanvas", { isDrawingMode: true });
+  canvas.freeDrawingBrush.color = "black";
+  canvas.freeDrawingBrush.width = 5;
+
+  console.log("✅ Fabric.js is working!");
+</script>
+
+<!-- Diagnostic Test -->
+<script>
+  if (typeof fabric === 'undefined') {
+    alert("❌ Fabric.js failed to load!");
+  } else {
+    console.log("✅ Fabric.js loaded successfully.");
+  }
+</script>
+
+</body>
+</html>
